@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>ABOUT PRODUCT</title>
+    <title>About Product | Your Website</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
 
     <style>
@@ -14,6 +14,7 @@
         header h1 {
             transform: translateX(100%); /* Menggeser teks ke kanan di luar layar */
             animation: slideIn 1s forwards; /* Animasi masuk dari kanan selama 1 detik */
+            font-size: 100px; /* Besar font untuk judul */
         }
 
         /* Keyframes untuk animasi slideIn */
@@ -32,7 +33,7 @@
 
         /* Keyframes untuk animasi slideIn */
         @keyframes slideIn {
-            to {
+            to{
                 transform: translateX(0); /* Menggeser section ke posisi awal (0) */
             }
         }
@@ -56,7 +57,7 @@
         }
 
         nav a:hover {
-            background-color: #04ff00; /* Warna latar belakang saat tombol dihover */
+            background-color: #ffd500; /* Warna latar belakang saat tombol dihover */
             transform: scale(1.1); /* Efek memperbesar tombol saat dihover */
         }
 
@@ -93,63 +94,45 @@
         }
 
         .left-image {
-            margin-right: 20px; /* Menambahkan margin ke kanan untuk logo_foco1 */
-        }
-
-        .right-image {
-            margin-left: 310px; /* Menambahkan margin ke kiri untuk logo_foco */
-        }
-
-	       .right-align-text {
-            flex: 1;
-            text-align: justify;
-            padding: 0 150px;
-        }
-
-        img {
-        margin-left: 200px;
-        position: relative;
-        z-index: 1;
-        transition: transform 0.3s; /* Add a transition for a smooth effect */
-        }
-
-        /*Add a hover effect for the image */
-        img:hover {
-        transform: scale(1.1); /* Increase the size of the image on hover */
-        }
-
-        .colored-rectangle {
             position: absolute;
-            background: #f66b1d;
-            width: 400px;
-            height: 420px;
-            left: 220px; /* Adjust the left position to move it further to the right */
-            top: 90px;
-            z-index: 0;
-            border-radius: 20px;
+            top: -240px;
+            left: 1050px;
+            width: 250px; /* Lebar gambar */
+            height: auto; /* Tinggi akan disesuaikan secara otomatis agar gambar tidak terdistorsi */
         }
 
-         /* CSS untuk membesarkan font dan menggeser gambar ke kanan */
-         .right-align-text h2 {
-            font-size: 28px; /* Change the font size to 30px */
-            line-height: 1.5; /* Adjust the line height as needed */
-            text-align: justify; /* Justify the text alignment */
+        /* CSS untuk membesarkan font dan menggeser gambar ke kanan */
+        .right-align-text h2 {
+            font-size: 36px; /* Besar font untuk judul */
+            background-color: #ffffff; /* Warna latar belakang */
+            padding: 20px; /* Padding untuk memberikan jarak dengan tepi kotak */
+            border-radius: 7px; /* Sudut melengkung pada kotak */
+            display: inline-block; /* Membuat kotak sesuai dengan teks */
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8); /* Efek bayangan */
         }
 
         .top-left-image {
             position: absolute;
-            top: -215px;
-            left: -195px;
+            top: -350px;
+            left: 20px;
             width: 300px; /* Lebar gambar */
             height: auto; /* Tinggi akan disesuaikan secara otomatis agar gambar tidak terdistorsi */
         }
 
+        /* Gaya CSS untuk kotak referensi */
+        .references-box {
+            background-color: #ffffff; /* Warna latar belakang kotak */
+            padding: 20px; /* Padding untuk memberikan jarak dengan tepi kotak */
+            border-radius: 7px; /* Sudut melengkung pada kotak */
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8); /* Efek bayangan pada kotak */
+            margin: 20px; /* Margin untuk memberikan jarak dengan elemen lain */
+            margin-top: -100px;
+        }
     </style>
-
 </head>
 <body>
     <header>
-        <h1>ABOUT PRODUCT</h1>
+        <h1>Referensi</h1>
         <nav>
             <a href="index.html">Home Page</a>
             <a href="about.html">About Product</a>
@@ -159,20 +142,14 @@
         </nav>
     </header>
     <section>
-        <img src="Logo_PKM.jpg" alt="Top Left Image" class="top-left-image">
         <!-- Menambahkan gambar dan teks "POCO..." -->
-        <img src="gambar_anda.jpg" alt="FOCO Palette Image">
-        <div class="colored-rectangle" ></div>
-        <div class="right-align-text">
-            <h2 style="color: #1f5692;">FOCO Palette (Forest Color Palette),<br>
-                yaitu perpaduan antara cat air dan<br>
-                alam sebagai suatu sarana untuk<br>
-                mengenalkan berbagai macam<br>
-                spesies tumbuhan yang ada di hutan<br>
-                Indonesia. Zat warna tersebut dapat<br>
-                digunakan dalam pembuatan cat air<br>
-                yang ramah lingkungan.
-            </h2>
+        <img src="toga_referensi.jpg" alt="FOCO Palette Image" class="left-image">
+        <img src="Logo_PKM.jpg" alt="Top Left Image" class="top-left-image">
+        <div class="references-box">
+            <h2>Albasthomi, Y., Sholikah, N.A. & Udyani, K. 2019. Pengolahan Limbah Cair Industri Cat dengan Proses Adsorpsi untuk Menurunkan COD dan TSS. Prosiding Seminar Nasional Sains dan Teknologi Terapan. September 2019, Jawa Timur, Indonesia. pp.671-676. <br>
+            <br> Ardiatma, D. & Prana, E.N.A.W. 2019. Pemanfaatan limbah lumpur wwtp untuk diolah kembali menjadi cat plamur. Jurnal Teknologi dan Pengelolaan Lingkungan. 6(2):21-31. <br>
+            <br> Crawshaw, Alwyn. 2006. Cat Air. Edisi ke-1. Erlangga. Jakarta. Indonesia. <br>
+            <br> Pualilin, Y., Tjoneng, A. & Abdullah, A. 2019. Pemetaan zonasi daerah rawan kebakaran hutan dan lahan di Kabupaten Gowa. AGROTEK: Jurnal Ilmiah Ilmu Pertanian. 3(1):89-97.</h2> 
         </div>
     </section>
 </body>
