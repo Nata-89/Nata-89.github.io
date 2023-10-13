@@ -107,9 +107,15 @@
         }
 
         img {
-            margin-left: 200px; /* Geser gambar ke kanan */
-            position: relative;
-            z-index: 1;
+        margin-left: 200px;
+        position: relative;
+        z-index: 1;
+        transition: transform 0.3s; /* Add a transition for a smooth effect */
+        }
+
+        /*Add a hover effect for the image */
+        img:hover {
+        transform: scale(1.1); /* Increase the size of the image on hover */
         }
 
         .colored-rectangle {
