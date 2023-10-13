@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Website</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        /* Gaya CSS untuk body (tata letak halaman) */
+        body {
+            background-color: white; /* Menjadikan latar belakang putih */
+        }
+
+        /* Gaya CSS untuk teks judul */
+        header h1 {
+            transform: translateX(100%); /* Menggeser teks ke kanan di luar layar */
+            animation: slideIn 1s forwards; /* Animasi masuk dari kanan selama 1 detik */
+        }
+
+        /* Keyframes untuk animasi slideIn */
+        @keyframes slideIn {
+            to {
+                transform: translateX(0); /* Menggeser teks ke posisi awal (0) */
+            }
+        }
+
+        section {
+            display: flex;
+            align-items: center;
+            transform: translateX(100%); /* Menggeser seluruh section ke kanan di luar layar */
+            animation: slideIn 1s forwards; /* Animasi masuk dari kanan selama 1 detik */
+        }
+
+        /* Keyframes untuk animasi slideIn */
+        @keyframes slideIn {
+            to {
+                transform: translateX(0); /* Menggeser section ke posisi awal (0) */
+            }
+        }
+
+        /* Gaya CSS untuk navigasi */
+        nav {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 10px;
+        }
+
+        nav a {
+            text-decoration: none;
+            margin: 0 10px;
+            background-color: #ffffff; /* Warna latar belakang tombol */
+            color: rgb(0, 0, 0); /* Warna teks tombol */
+            padding: 15px 20px; /* Padding tombol */
+            border-radius: 7px; /* Sudut melengkung pada tombol */
+            transition: background-color 0.3s, transform 0.3s; /* Efek transisi latar belakang dan transformasi saat tombol dihover */
+        }
+
+        nav a:hover {
+            background-color: #00ffe5; /* Warna latar belakang saat tombol dihover */
+            transform: scale(1.1); /* Efek memperbesar tombol saat dihover */
+        }
+
+        nav a:active {
+            transform: scale(0.9); /* Efek mengerutkan tombol saat ditekan */
+        }
+
+        /* Efek menggeser ke bawah saat "About Product" ditekan */
+        nav a:nth-child(2):active {
+            transform: translateY(10px);
+        }
+
+        .image-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .left-image,
+        .right-image {
+            max-width: 100%;
+            transition: transform 0.3s; /* Efek transisi ketika memperbesar gambar */
+            cursor: pointer;
+            margin-top: -10px; /* Menambahkan margin atas negatif untuk menggeser gambar ke atas */
+        }
+
+        .left-image:hover,
+        .right-image:hover {
+            transform: scale(1.2); /* Memperbesar gambar saat digunakan */
+        }
+
+        .left-image:active,
+        .right-image:active {
+            transform: scale(0.8); /* Mengecilkan gambar saat diklik */
+        }
+
+        .left-image {
+            margin-right: 20px; /* Menambahkan margin ke kanan untuk logo_foco1 */
+        }
+
+        .right-image {
+            margin-left: 310px; /* Menambahkan margin ke kiri untuk logo_foco */
+        }
+
+        /* Gaya CSS untuk gambar di pojok kiri atas */
+        .top-left-image {
+            position: absolute;
+            top: -215px;
+            left: 20px;
+            width: 300px; /* Lebar gambar */
+            height: auto; /* Tinggi akan disesuaikan secara otomatis agar gambar tidak terdistorsi */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SELAMAT DATANG DI WEBSITE FOCO PALETTE</h1>
+    </header>
+    <section>
+        <!-- Mengelompokkan gambar-gambar dalam sebuah div -->
+        <div class="image-container">
+            <!-- Menambahkan gambar logo_foco1.jpg di sebelah kiri -->
+            <img src="logo_foco1.jpg" alt="FOCO Palette Image1" class="right-image">
+            <!-- Menambahkan gambar logo_foco.jpg -->
+            <img src="logo_foco.jpg" alt="FOCO Palette Image" class="left-image">
+        </div>
+        <div class="right-align-text">
+        </div>
+        <!-- Menambahkan gambar di pojok kiri atas -->
+        <img src="Logo_PKM.jpg" alt="Top Left Image" class="top-left-image">
+    </section>
+    <nav>
+        <!-- Navigasi di pojok kanan atas dengan latar belakang putih -->
+        <a href="index.html">Home Page</a>
+        <a href="about.html">About Product</a>
+        <a href="superiority.html">Superiority</a>
+        <a href="results.html">Results</a>
+    </nav>
+</body>
+</html>
