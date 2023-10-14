@@ -72,6 +72,16 @@
             margin: 70px; /* Adjusted margin to make the spacing shorter */
             border-radius: 50px; /* Rounded rectangles with border-radius */
             position: relative; /* Position relative for pseudo-element positioning */
+            animation: slideInLeft 1s ease forwards;
+        }
+
+        @keyframes slideInLeft {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(0);
+            }
         }
 
         .capsule::after {
@@ -81,7 +91,18 @@
             position: absolute; /* Position the "warna" text absolutely within the capsule */
             bottom: -60px; /* Adjust the spacing between the capsule and the "warna" text */
             font-weight: bold;
+            animation: slideInLeft 1s ease forwards;
         }
+
+        @keyframes slideInLeft {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+        
 
         /* Unique identifiers for each "warna" text */
         .capsule-container.top .capsule:nth-child(1)::after {
@@ -90,6 +111,16 @@
             font-weight: bold;
             left: 50px;
             color: #de0f3f;
+            animation: slideInLeft 1s ease forwards;
+        }
+
+        @keyframes slideInLeft {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(0);
+            }
         }
 
         .capsule-container.top .capsule:nth-child(2)::after {
@@ -97,6 +128,16 @@
             font-size: 40px;
             left: 60px;
             color: #f9943b;
+            animation: slideInLeft 1s ease forwards;
+        }
+
+        @keyframes slideInLeft {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(0);
+            }
         }
 
         .capsule-container.top .capsule:nth-child(3)::after {
@@ -104,6 +145,16 @@
             font-size: 40px;
             left: 42px;
             color: #ffff00;
+            animation: slideInLeft 1s ease forwards;
+        }
+
+        @keyframes slideInLeft {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(0);
+            }
         }
 
         .capsule-container.bottom .capsule:nth-child(1)::after {
@@ -111,20 +162,51 @@
             font-size: 40px;
             left: 70px;
             color: #69a1f1;
+            animation: slideInLeft 1s ease forwards;
         }
 
+        @keyframes slideInLeft {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+        
         .capsule-container.bottom .capsule:nth-child(2)::after {
             content: "Hijau";
             font-size: 40px;
             left: 60px;
             color: #1ab26b;
+            animation: slideInLeft 1s ease forwards;
         }
+
+        @keyframes slideInLeft {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
 
         .capsule-container.bottom .capsule:nth-child(3)::after {
             content: "Coklat";
             font-size: 40px;
             left: 50px;
             color: #ad793b;
+            animation: slideInLeft 1s ease forwards;
+        }
+
+        @keyframes slideInLeft {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(0);
+            }
         }
 
         /* Add a class to target the image on hover */
@@ -199,7 +281,7 @@
         }
 
     </style>
-    <title>6 Warna Alamai | Foco Palette</title>
+    <title>6 Warna Alami | Foco Palette</title>
 </head>
 <body>
     <div class="container">
