@@ -48,15 +48,15 @@
         nav a {
             text-decoration: none;
             margin: 0 10px;
-            background-color: #ffffff; /* Warna latar belakang tombol */
             color: rgb(0, 0, 0); /* Warna teks tombol */
             padding: 15px 20px; /* Padding tombol */
             border-radius: 7px; /* Sudut melengkung pada tombol */
             transition: background-color 0.3s, transform 0.3s; /* Efek transisi latar belakang dan transformasi saat tombol dihover */
+            font-weight: bold;
         }
 
         nav a:hover {
-            background-color: #04ff00; /* Warna latar belakang saat tombol dihover */
+            background-color: #ff4fc4; /* Warna latar belakang saat tombol dihover */
             transform: scale(1.1); /* Efek memperbesar tombol saat dihover */
         }
 
@@ -144,6 +144,43 @@
             height: auto; /* Tinggi akan disesuaikan secara otomatis agar gambar tidak terdistorsi */
         }
 
+            .order-now{
+                text-align: center;
+                margin-top: 0px;
+            }
+
+            .order-button{
+                background: #f66b1d;
+                color: #ffffff;
+                padding: 15px 30px;
+                border-radius: 15px;
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 24px;
+                transition: background 0.3s;
+                position: absolute;
+                right: 300px;
+                top: 700px;
+                transition: background 0.3s;
+                animation: pulse 1s infinite; /* Tambahkan animasi dengan nama "pulse" */
+            }
+
+            @keyframes pulse {
+                0% {
+                    transform: scale(1); /* Skala normal */
+                }
+                50% {
+                    transform: scale(1.1); /* Skala besar */
+                }
+                100% {
+                    transform: scale(1); /* Skala normal */
+                }
+            }
+
+        .order-button:hover, .colored-rectangle:hover {
+            background: #ffcc99; /* Change the background color on hover */
+        }
+
     </style>
 
 </head>
@@ -156,12 +193,15 @@
             <a href="superiority.html">Superiority</a>
             <a href="results.html">Results</a>
             <a href="referensi.html">Referensi</a>
+            <a href="spotify.html">Spotify</a>
         </nav>
     </header>
     <section>
-        <img src="Logo_PKM.jpg" alt="Top Left Image" class="top-left-image">
+        <a href="https://api.whatsapp.com/send/?phone=+%2B6288225181407&text=Halo%2C%20saya%20tertarik%20dengan%20produk%20FOCO%20Palette" target="_blank">
+            <img src="gambar_anda.jpg" alt="FOCO Palette Image">
+        </a>
         <!-- Menambahkan gambar dan teks "POCO..." -->
-        <img src="gambar_anda.jpg" alt="FOCO Palette Image">
+        <img src="Logo_PKM.jpg" alt="Top Left Image" class="top-left-image">
         <div class="colored-rectangle" ></div>
         <div class="right-align-text">
             <h2 style="color: #1f5692;">FOCO Palette (Forest Color Palette),<br>
@@ -175,5 +215,8 @@
             </h2>
         </div>
     </section>
+    <div class="order-now">
+        <a href="https://api.whatsapp.com/send/?phone=+%2B6288225181407&text=Halo%2C%20saya%20tertarik%20dengan%20produk%20FOCO%20Palette" class="order-button" target="_blank">Pesan sekarang</a>
+    </div>
 </body>
 </html>

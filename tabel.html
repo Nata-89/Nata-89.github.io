@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <canvas id="barChart" width="400" height="300"></canvas>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const data = {
+                labels: [
+                    "Modal Awal",
+                    "Biaya Produksi/tahun",
+                    "Hasil Usaha/tahun",
+                    "Keuntungan/tahun",
+                    "Break Even Point"
+                ],
+                datasets: [{
+                    label: false,
+                    data: [9000000, 27000000, 30450000, 3450000, 8895950.38],
+                    backgroundColor: [
+                        'rgba(167, 0, 161, 1)',
+                        'rgba(220, 0, 124, 1)',
+                        'rgba(246, 43, 80, 1)',
+                        'rgba(246, 107, 29, 1)',
+                    ],
+                    borderColor: [
+                        'rgba(167, 0, 161, 1)',
+                        'rgba(220, 0, 124, 1)',
+                        'rgba(246, 43, 80, 1)',
+                        'rgba(246, 107, 29, 1)',
+                    ],
+                    borderWidth: 1,
+                    borderRadius: 200
+                }]
+            };
+
+            const config = {
+                type: 'bar',
+                data: data,
+                options: {
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Financial Summary',
+                            font: {
+                                size: 40
+                            },
+                            grid: {
+                                color: 'color: rgb(31, 86, 146)',
+                            }
+                        },
+                    },
+                    scales: {
+                        x: {
+                            grid: {
+                                display: false,
+                            },
+                            ticks: {
+                                font: {
+                                    size: 10
+                                },
+                                maxRotation: 0,
+                                minRotation: 0,
+                            },
+                        },
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                stepSize: 100000,
+                                font: {
+                                    size: 16
+                                },
+                            },
+                            grid: {
+                                color: 'rgba(0, 0, 0, 0.1)',
+                            },
+                        },
+                    },
+                    barThickness: 100,
+                    barSpacing: 0.2,
+                    animation: {
+                        duration: 2000,
+                        easing: 'easeOutBounce',
+                    },
+                    legend: {
+                        display: true,
+                        position: 'top',
+                    }
+                }
+            };
+
+            const ctx = document.getElementById('barChart').getContext('2d');
+            new Chart(ctx, config);
+        });
+    </script>
+</body>
+</html>
+
+

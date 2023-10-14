@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FOCO di Spotify</title>
+    <link rel="stylesheet" type="text/css" href="styles.css"> <!-- Link to the external CSS file -->
+    <style>
+        @font-face {
+            font-family: 'CocogoosePro';
+            src: url('path-to-your-font/Cocogoose_Pro-trial.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'CocogoosePro', Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        header h1 {
+            transform: translateX(100%);
+            animation: slideIn 1s forwards;
+            font-size: 100px;
+            margin-top: 20px;
+            margin-bottom: -40px;
+        }
+
+        @keyframes slideIn {
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transform: translateX(100%);
+            animation: slideIn 1s forwards;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }        
+
+        .image-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .logo {
+            width: 250px;
+            height: auto;
+            margin: 20px 0;
+        }
+
+        .foco {
+            color: #1f5692;
+            font-size: 80px;
+        }
+
+        .spotify {
+            color: #1ab26b;
+            font-size: 80px;
+        }
+
+        .new-text {
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            color: #1f5692;
+            font-size: 35px;
+            margin: 10px 0;
+        }
+
+        .play-button {
+            background-color: #1ab26b;
+            color: white;
+            padding: 15px 65px;
+            border-radius: 50px;
+            font-size: 35px;
+            font-weight: bold;
+            text-decoration: none;
+            box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.4);
+            margin-top: 20px; /* Ubah margin-top untuk mengatur jarak vertikal tombol "Putar" */
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }     
+
+        .logo {
+            width: 250px;
+            height: auto;
+            margin: 20px -10px 20px -300px; /* Sesuaikan nilai margin-left (100px) sesuai kebutuhan */
+            animation: float 4s ease-in-out infinite;
+        }
+
+        /* Tambahkan CSS untuk mengatur posisi tombol "Putar" */
+        .image-container {
+            position: relative;
+        }
+
+        .play-button {
+            position: absolute;
+            top: 50%; /* Posisikan di tengah vertikal */
+            left: 50%; /* Posisikan di tengah horizontal */
+            transform: translate(10%, -100%); /* Geser setengah lebar dan tinggi dari tombol */
+        }
+
+        nav {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px;
+        }
+
+        nav a {
+            text-decoration: none;
+            margin: 0 10px;
+            color: rgb(0, 0, 0);
+            padding: 15px 20px;
+            border-radius: 7px;
+            transition: background-color 0.3s, transform 0.3s;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background-color: #00ff4c;
+            transform: scale(1.1);
+        }
+
+        nav a:active {
+            transform: scale(0.9);
+        }
+
+        nav a:nth-child(2):active {
+            transform: translateY(10px);
+        }
+
+        .top-left-image {
+            position: absolute;
+            top: -200px;
+            left: 20px;
+            width: 300px; /* Lebar gambar */
+            height: auto; /* Tinggi akan disesuaikan secara otomatis agar gambar tidak terdistorsi */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><span class="foco">FOCO di </span> <span class="spotify">Spotify</span></h1>
+    </header>
+    <section>
+        <div class="container">
+            <p class="new-text">
+                Foco menghadirkan fitur menarik lainya yaitu Spotify<br>
+                yang berisi podcast edukasi tentang mental health &<br>
+                musik instrumentasi yang menenangkan. Klik dibawah<br>
+                untuk memutar playlist !
+            </p>
+            <div class="image-container">
+                <img src="spotify_logo.jpg" alt="Spotify Logo" class="logo">
+                <a href="https://open.spotify.com/show/4EGPijiWXcseu4S901CkAf" target="_blank" class="play-button">
+                    Putar
+                </a>
+            </div>
+        </div>
+        <img src="Logo_PKM.jpg" alt="Top Left Image" class="top-left-image">
+    </section>
+    <nav>
+        <a href="index.html">Home Page</a>
+        <a href="about.html">About Product</a>
+        <a href="superiority.html">Superiority</a>
+        <a href="results.html">Results</a>
+        <a href="referensi.html">Referensi</a>
+        <a href="spotify.html" >Spotify</a>
+    </nav>
+</body>
+</html>

@@ -1,9 +1,17 @@
+@font-face {
+    font-family: 'CocogoosePro';
+    src: url('path-to-your-font/Cocogoose_Pro-trial.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     font-family:  Arial, Helvetica, sans-serif;
     background: linear-gradient(to right, #fff7ad, #ffd2d1, #ffa9f9); /* Gradasi horizontal */
     margin: 0;
     padding: 0;
 }
+
 header {
     background: linear-gradient(to right, #fff7ad, #ffd2d1, #ffa9f9); /* Gradasi horizontal */
     color: #1f5692;
