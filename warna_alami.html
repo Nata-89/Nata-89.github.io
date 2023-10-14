@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #fff7ad, #ffd2d1, #ffa9f9);
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Change 'center' to 'flex-start' */
+            height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            flex-direction: column; /* Add to stack the elements vertically */
+        }
+
+        header {
+            text-align: left;
+            margin-top: -250px; /* Add margin to push the header down */
+            margin-left: -50px;
+            font-size: 50px;
+            line-height: 0.9; /* Adjust the line height to reduce spacing */
+        }
+
+        h1 {
+            color: #1f5692; /* Text color for "Terdapat" and "warna alami" */
+            margin-top: -120px;
+            margin-left: 200px;
+        }
+
+        h1 span {
+            color: #f66b1d; /* Text color for the number "6" */
+        }
+
+        .content {
+            position: relative;
+            margin-right: 500px; /* Adjust this value to control the spacing between text and image */
+            margin-top: -150px;
+        }
+
+        .adjustable-image {
+            /* You can set a maximum height to limit the image's size */
+            max-width: 200%; /* Adjust as needed */
+            margin-left: -130px;
+            margin-right: -50px;
+            margin-top: 250px;
+            margin-bottom: 170px;
+        }
+
+        .capsule-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .row {
+            display: flex;
+            justify-content: center; /* Center the capsules horizontally */
+            margin-bottom: -50px; /* Added margin between the two rows */
+        }
+
+        .capsule {
+            width: 220px;
+            height: 70px;
+            margin: 70px; /* Adjusted margin to make the spacing shorter */
+            border-radius: 50px; /* Rounded rectangles with border-radius */
+            position: relative; /* Position relative for pseudo-element positioning */
+        }
+
+        .capsule::after {
+            content: "warna"; /* Text content */
+            display: block; /* Make it a block-level element to stay below the capsule */
+            font-size: 16px; /* Adjust the font size as needed */
+            position: absolute; /* Position the "warna" text absolutely within the capsule */
+            bottom: -60px; /* Adjust the spacing between the capsule and the "warna" text */
+            font-weight: bold;
+        }
+
+        /* Unique identifiers for each "warna" text */
+        .capsule-container.top .capsule:nth-child(1)::after {
+            content: "Merah";
+            font-size: 40px;
+            font-weight: bold;
+            left: 50px;
+            color: #de0f3f;
+        }
+
+        .capsule-container.top .capsule:nth-child(2)::after {
+            content: "Oran";
+            font-size: 40px;
+            left: 60px;
+            color: #f9943b;
+        }
+
+        .capsule-container.top .capsule:nth-child(3)::after {
+            content: "Kuning";
+            font-size: 40px;
+            left: 42px;
+            color: #ffff00;
+        }
+
+        .capsule-container.bottom .capsule:nth-child(1)::after {
+            content: "Biru";
+            font-size: 40px;
+            left: 70px;
+            color: #69a1f1;
+        }
+
+        .capsule-container.bottom .capsule:nth-child(2)::after {
+            content: "Hijau";
+            font-size: 40px;
+            left: 60px;
+            color: #1ab26b;
+        }
+
+        .capsule-container.bottom .capsule:nth-child(3)::after {
+            content: "Coklat";
+            font-size: 40px;
+            left: 50px;
+            color: #ad793b;
+        }
+
+        /* Add a class to target the image on hover */
+        .adjustable-image:hover {
+            transform: scale(1.1); /* Increase the size of the image */
+            transition: transform 0.3s; /* Add a smooth transition effect */
+            z-index: 1; /* Bring the image to the foreground */
+        }
+
+        /* Add the hover effect for the capsules */
+        .capsule:hover {
+            transform: scale(1.1); /* Increase the size of the capsule */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a box shadow for a pop-up effect */
+            transition: transform 0.3s, box-shadow 0.3s; /* Add a smooth transition effect for both properties */
+            z-index: 1; /* Bring the capsule to the foreground */
+        }
+
+        /* Reset the hover effect for the ::after pseudo-element */
+        .capsule:hover::after {
+            transform: scale(1); /* Reset the transform to its original size */
+            box-shadow: none; /* Remove the box shadow */
+            transition: transform 0.3s, box-shadow 0.3s; /* Add a smooth transition effect to reset the styles */
+            z-index: 0; /* Send the pseudo-element to the background */
+        }
+
+        nav {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px;
+        }
+
+        nav a {
+            text-decoration: none;
+            margin: 0 10px;
+            color: rgb(0, 0, 0);
+            padding: 15px 20px;
+            border-radius: 7px;
+            transition: background-color 0.3s, transform 0.3s;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background-color: #0080ff;
+            transform: scale(1.1);
+        }
+
+        nav a:active {
+            transform: scale(0.9);
+        }
+
+        nav a:nth-child(2):active {
+            transform: translateY(10px);
+        }
+
+        .top-left-image {
+            position: absolute;
+            top: 15px;
+            left: 50px;
+            width: 300px; /* Lebar gambar */
+            height: auto; /* Tinggi akan disesuaikan secara otomatis agar gambar tidak terdistorsi */
+            animation: slideInLeft 1s ease forwards;
+        }
+
+        @keyframes slideInLeft {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+    </style>
+    <title>6 Warna Alamai | Foco Palette</title>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <img src="palet.jpg" alt="Color Palette" class="adjustable-image">
+        </div>
+        <header>
+            <h1>Terdapat <span>6</span> <br>warna alami</h1>
+            <img src="Logo_PKM.jpg" alt="Top Left Image" class="top-left-image">
+        </header>
+        <div class="capsule-container top"> 
+            <div class="row">
+                <div class="capsule" style="background-color: #de0f3f;"></div>
+                <div class="capsule" style="background-color: #ff8210;"></div>
+                <div class="capsule" style="background-color: #ffff00;"></div>
+            </div>
+        </div>
+        <div class="capsule-container bottom">
+            <div class="row">
+                <div class="capsule" style="background-color: #56aeff;"></div>
+                <div class="capsule" style="background-color: #1ab26b;"></div>
+                <div class="capsule" style="background-color: #ad795b;"></div>
+            </div>
+        </div>
+    </div>
+    <nav>
+        <a href="index.html">Home Page</a>
+        <a href="about.html">About Product</a>
+        <a href="superiority.html">Superiority</a>
+        <a href="results.html">Results</a>
+        <a href="referensi.html">Referensi</a>
+        <a href="spotify.html">Spotify</a>
+        <a href="warna_alami.html">Warna Alami</a>
+    </nav>
+</body>
+</html>
