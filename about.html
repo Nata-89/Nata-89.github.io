@@ -14,6 +14,8 @@
         header h1 {
             transform: translateX(100%); /* Menggeser teks ke kanan di luar layar */
             animation: slideIn 1s forwards; /* Animasi masuk dari kanan selama 1 detik */
+            margin-top: 20px;
+            margin-bottom: -120px;
         }
 
         /* Keyframes untuk animasi slideIn */
@@ -28,6 +30,8 @@
             align-items: center;
             transform: translateX(100%); /* Menggeser seluruh section ke kanan di luar layar */
             animation: slideIn 1s forwards; /* Animasi masuk dari kanan selama 1 detik */
+            margin-top: 20px;
+            margin-bottom: 0px;
         }
 
         /* Keyframes untuk animasi slideIn */
@@ -138,10 +142,20 @@
 
         .top-left-image {
             position: absolute;
-            top: -215px;
-            left: -195px;
+            top: 15px;
+            left: -155px;
             width: 300px; /* Lebar gambar */
             height: auto; /* Tinggi akan disesuaikan secara otomatis agar gambar tidak terdistorsi */
+            animation: slideInLeft 1s ease forwards;
+        }
+
+        @keyframes slideInLeft {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(0);
+            }
         }
 
             .order-now{
@@ -160,7 +174,7 @@
                 transition: background 0.3s;
                 position: absolute;
                 right: 300px;
-                top: 700px;
+                top: 600px;
                 transition: background 0.3s;
                 animation: pulse 1s infinite; /* Tambahkan animasi dengan nama "pulse" */
             }
@@ -195,13 +209,13 @@
             <a href="referensi.html">Referensi</a>
             <a href="spotify.html">Spotify</a>
         </nav>
+        <img src="Logo_PKM.jpg" alt="Top Left Image" class="top-left-image">
     </header>
     <section>
         <a href="https://api.whatsapp.com/send/?phone=+%2B6288225181407&text=Halo%2C%20saya%20tertarik%20dengan%20produk%20FOCO%20Palette" target="_blank">
             <img src="gambar_anda.jpg" alt="FOCO Palette Image">
         </a>
         <!-- Menambahkan gambar dan teks "POCO..." -->
-        <img src="Logo_PKM.jpg" alt="Top Left Image" class="top-left-image">
         <div class="colored-rectangle" ></div>
         <div class="right-align-text">
             <h2 style="color: #1f5692;">FOCO Palette (Forest Color Palette),<br>
