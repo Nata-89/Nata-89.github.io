@@ -14,7 +14,9 @@
         header h1 {
             transform: translateX(100%); /* Menggeser teks ke kanan di luar layar */
             animation: slideIn 1s forwards; /* Animasi masuk dari kanan selama 1 detik */
-            font-size: 100px; /* Besar font untuk judul */
+            font-size: 70px; /* Besar font untuk judul */
+            margin-top: 60px;
+            margin-left: -800px;
         }
 
         /* Keyframes untuk animasi slideIn */
@@ -29,6 +31,10 @@
             align-items: center;
             transform: translateX(100%); /* Menggeser seluruh section ke kanan di luar layar */
             animation: slideIn 1s forwards; /* Animasi masuk dari kanan selama 1 detik */
+
+            margin-top: -100px;
+            margin-bottom: 0px;
+            max-width: 110%;
         }
 
         /* Keyframes untuk animasi slideIn */
@@ -74,12 +80,11 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            
         }
 
         .left-image,
         .right-image {
-            max-width: 100%;
+            max-width: 90%;
             transition: transform 0.3s; /* Efek transisi ketika memperbesar gambar */
             cursor: pointer; /* Mengubah kursor saat digunakan */
         }
@@ -104,49 +109,49 @@
 
         .right-align-text {
             flex: 1;
-            text-align: left;
-            padding: 0 150px;
+            text-align: justify;
+            padding: 0 20px; /* Menambahkan sedikit padding di sekitar teks */
         }
 
         /* CSS untuk membesarkan font dan menggeser gambar ke kanan */
-        .right-align-text h2 {
+        .right-align-text h2,
+        .right-align-text h3,
+        .right-align-text h4 {
             font-size: 36px; /* Besar font untuk judul */
             background-color: #ffffff; /* Warna latar belakang */
             color: rgb(31, 86, 146); /* Warna teks tombol */
             padding: 20px; /* Padding untuk memberikan jarak dengan tepi kotak */
             border-radius: 7px; /* Sudut melengkung pada kotak */
-            display: inline-block; /* Membuat kotak sesuai dengan teks */
-            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8); /* Efek bayangan */
+            display: flex; /* Mengubah tampilan teks dan gambar menjadi flex */
+            align-items: center; /* Mengatur gambar dan teks ke tengah vertikal */
+            text-align: center;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Menambahkan bayangan ke kotak */
         }
 
-        .right-align-text h3 {
-            font-size: 36px;
-            color: rgb(31, 86, 146); /* Warna teks tombol */
-            background-color: #ffffff; /* Warna latar belakang */
-            padding: 20px; /* Padding untuk memberikan jarak dengan tepi kotak */
-            border-radius: 7px; /* Sudut melengkung pada kotak */
-            display: inline-block; /* Membuat kotak sesuai dengan teks */
-            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8); /* Efek bayangan */
-        }
-
-        .right-align-text h4 {
-            font-size: 36px;
-            color: rgb(31, 86, 146); /* Warna teks tombol */
-            background-color: #ffffff; /* Warna latar belakang */
-            padding: 20px; /* Padding untuk memberikan jarak dengan tepi kotak */
-            border-radius: 7px; /* Sudut melengkung pada kotak */
-            display: inline-block; /* Membuat kotak sesuai dengan teks */
-            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8); /* Efek bayangan */
+        .right-align-text h2 img,
+        .right-align-text h3 img,
+        .right-align-text h4 img {
+            max-width: 150px; /* Mengatur lebar maksimum gambar agar tidak terlalu besar */
+            margin-right: 10px; /* Menambahkan margin ke kanan gambar agar ada jarak antara gambar dan teks */
         }
 
         .top-left-image {
             position: absolute;
-            top: -350px;
-            left: 20px;
-            width: 300px; /* Lebar gambar */
+            top: 20px;
+            left: 50px;
+            width: 340px; /* Lebar gambar */
             height: auto; /* Tinggi akan disesuaikan secara otomatis agar gambar tidak terdistorsi */
+            animation: slideInLeft 1s ease forwards;
         }
 
+        @keyframes slideInLeft {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
     </style>
 </head>
 <body>
@@ -160,16 +165,15 @@
             <a href="referensi.html">Referensi</a>
             <a href="spotify.html" >Spotify</a>
         </nav>
+        <img src="Logo_PKM.jpg" alt="Top Left Image" class="top-left-image">
     </header>
     <section>
         <!-- Menambahkan gambar dan teks "POCO..." -->
         <img src="mas2_baju_kuning.jpg" alt="FOCO Palette Image" class="left-image">
-        <img src="Logo_PKM.jpg" alt="Top Left Image" class="top-left-image">    
         <div class="right-align-text">
-            <h2>Cat air dengan bahan alam pertama di Indonesia yang Edukatif</h2>
-            <h3>Terintregasi dengan Website yangberisi edukasi tentang keaneka-
-                ragaman tumbuhan dan mental health</h3>
-            <h4>Menggunakan ekstraksi tumbuhan untuk mendapatkan zat warna alami</h4>
+            <h2><img src="gambar3.jpg" alt="Gambar 1"> Cat air dengan bahan alam pertama di Indonesia yang Edukatif</h2>
+            <h3><img src="gambar1.jpg" alt="Gambar 2"> Terintregasi dengan Website yang berisi edukasi tentang keaneka-ragaman tumbuhan dan mental health</h3>
+            <h4><img src="gambar2.jpg" alt="Gambar 3"> Menggunakan ekstraksi tumbuhan untuk mendapatkan zat warna alami</h4>
         </div>
     </section>
 </body>
